@@ -13,10 +13,10 @@ def degisiklik():
                     
         with open("bilgiler.txt", "w", encoding ="utf-8") as file:
             for satir in satirlar:
-                if f"ID: {kod}" in satir:
+                if f"ID: {kod}" in satir: #ID'yi bulup, maaş bilgisine yeni maaş bilgisini atıyoruz.
                     parcalar = satir.split(", ")
                     parcalar[4] = f"Maaş: {yeni_maas}"
-                    file.write(", ".join(parcalar))
+                    file.write(", ".join(parcalar)) #
                     kisi_bulundu = True 
                 else:
                     file.write(satir)   

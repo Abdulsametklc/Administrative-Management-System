@@ -10,7 +10,7 @@ def ekle():
     telefon = input("Telefon Numarası: ")
     id = input("ID(Örnek: aa77aa formatında ID ekleyiniz.): ")
     
-    if giris_uzunlugu_dogrula(tc, 11) and giris_uzunlugu_dogrula(telefon, 11) and giris_uzunlugu_dogrula(id, 6):
+    if giris_uzunlugu_dogrula(tc, 11) and giris_uzunlugu_dogrula(telefon, 11) and giris_uzunlugu_dogrula(id, 6): #oluşturduğum karakter doğrulama fonksiyonu ile tc, ıd ve telefon numaralarını kontrol ediyorum.
         with open("bilgiler.txt", "r", encoding = "utf-8") as file:
             satirlar = file.readlines()
             for satir in satirlar:
